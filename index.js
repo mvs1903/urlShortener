@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8000
 const mongoose = require('./mongoDB_conn')
-
+const cors = require('cors')
 const Url=require('./models/url')
 
+app.use(cors())
 app.use(express.json())
 
 app.post('/seturl', async(req, res) => {
