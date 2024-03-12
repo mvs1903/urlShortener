@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 const mongoose = require('./mongoDB_conn')
-// const username='muskaan'
-// const password='secret'
 
 const Url=require('./models/url')
 
@@ -24,12 +22,6 @@ app.post('/seturl', async(req, res) => {
  else{
   res.send("Invalid user")
  }
-
- 
- 
-
-
-
   res.send('added succesfully')
 })
 
@@ -43,7 +35,6 @@ app.get('/:name',async (req, res) => {
  else{
   res.send("urlname notfound")
  }
- 
 
 })
 
