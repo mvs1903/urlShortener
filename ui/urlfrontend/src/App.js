@@ -102,7 +102,7 @@ function App() {
             <a href={`https://pruneit-backend.onrender.com/${item.name}`} target="_blank" rel="noreferrer">
             <h6 className="card-subtitle mb-2 text-body-secondary">{`https://pruneit-backend.onrender.com/${item.name}`}</h6> </a>
             <p className="card-text " style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}}>{item.url}</p>
-            <button type="button" className="btn btn-secondary" onClick={() => copyToClipboard(item.name)}>Copy</button>
+            <button type="button" className="btn btn-secondary" onClick={() => copyToClipboard(`https://pruneit-backend.onrender.com/${item.name}`)}>Copy</button>
           </div>
         </div>
         ))}
