@@ -14,6 +14,7 @@ async function uploadUrl(name,url) {
    return (response)
  } catch (error) {
    console.error(error);
+   return(error)
  }
 
 }

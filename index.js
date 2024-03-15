@@ -21,9 +21,11 @@ app.post('/seturl', async(req, res) => {
  }
 
  else{
-  res.send("Invalid user")
+  res.status(400).send("please enter a unique name")
+  return
  }
-  res.send('added succesfully')
+ res.status(200).send("added sucessfully")
+  
 })
 
 app.get('/:name',async (req, res) => {
@@ -36,7 +38,6 @@ app.get('/:name',async (req, res) => {
  else{
   res.send("urlname notfound")
  }
-
 })
 
 app.listen(port, () => {
